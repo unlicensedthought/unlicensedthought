@@ -1,0 +1,8 @@
+{
+  "off": {
+    "vuln-scan": {
+      "reason": "this repo is a profile README and a verify script: it has no dependencies and tracks no npm package-lock.json, which is the only lockfile vuln-scan reads, so the check fails closed on every run",
+      "since": "2026-11-18"
+    }
+  }
+}

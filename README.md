@@ -22,4 +22,4 @@ Industrial weighing systems across a national network of 1,000+ locations; 15+ d
 
 **Writing and contact**
 
-Write-ups at [unlicensedthought.com](https://unlicensedthought.com) · [LinkedIn](https://www.linkedin.com/in/adam-scheurer)
+Write-ups at [unlicensedthought.com](https://unlicensedthought.com) · [LinkedIn](https://www.linkedin.com/in/adamscheurer/)
