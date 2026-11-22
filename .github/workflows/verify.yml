@@ -1,0 +1,26 @@
+name: verify
+
+# Runs the repo's own scripts/verify.sh on every push to the trunk and on demand. Standard
+# GitHub-hosted runners are free for a public repo; the unlicensedthought lane gate
+# (trunkq lane-check) refuses any change to this file that could be billed: one ubuntu-latest job,
+# 10 minute cap, push to hee-haw and workflow_dispatch only, no cache, artifact or package use,
+# every action pinned to a commit SHA.
+on:
+  push:
+    branches: [hee-haw]
+  workflow_dispatch:
+
+concurrency:
+  group: verify-${{ github.repository }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - run: bash scripts/verify.sh
